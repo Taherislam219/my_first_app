@@ -8,60 +8,68 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Menu"),
-        backgroundColor: Color.fromRGBO(255, 215, 0, 100),
-        foregroundColor: Color.fromRGBO(255, 255, 255, 1),
-        //leading: Icon(Icons.home),
+        title: Text("Homepage"),
+        backgroundColor: const Color.fromARGB(255, 157, 170, 82),
+        foregroundColor: Colors.white,
+        // leading: Icon(Icons.home),
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.search)),
           IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
-          IconButton(onPressed: () {}, icon: Icon(Icons.safety_check)),
-          IconButton(onPressed: () {}, icon: Icon(Icons.safety_divider)),
         ],
       ),
+
       drawer: Drawer(
         child: Column(
           children: [
             UserAccountsDrawerHeader(
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 39, 176, 73),
+                color: const Color.fromARGB(255, 157, 170, 82),
               ),
-              accountName: Text("John Doe"),
-              accountEmail: Text("johndoe@example.com"),
-              currentAccountPicture: Icon(Icons.person_2),
-            ),
-            ListTile(
-              trailing: const Icon(Icons.home),
-              title: const Text("Home"),
-              onTap: () {},
+              currentAccountPicture: Icon(Icons.person),
+              accountName: Text("Name"),
+              accountEmail: Text("Email"),
             ),
 
             ListTile(
-              trailing: const Icon(Icons.phone),
-              title: const Text("Contact"),
+              trailing: Icon(Icons.home),
+              hoverColor: const Color.fromARGB(255, 157, 170, 82),
+              title: Text("Homepage"),
               onTap: () {},
             ),
-
+            Divider(),
             ListTile(
-              trailing: const Icon(Icons.feedback),
-              title: const Text("Feedback"),
+              trailing: Icon(Icons.call),
+              hoverColor: const Color.fromARGB(255, 157, 170, 82),
+              title: Text("Contact Me"),
               onTap: () {},
             ),
+            Divider(),
+            ListTile(
+              trailing: Icon(Icons.feedback),
+              hoverColor: const Color.fromARGB(255, 157, 170, 82),
+              title: Text("FeedBack"),
+              onTap: () {},
+            ),
+            Spacer(),
+            Text("Copyright"),
           ],
         ),
       ),
+
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        backgroundColor: Color.fromARGB(255, 93, 239, 130),
-        foregroundColor: Color.fromARGB(255, 245, 243, 243),
+        backgroundColor: const Color.fromARGB(255, 157, 170, 82),
+        foregroundColor: Colors.white,
+        shape: CircleBorder(),
+        tooltip: "Message",
         child: Icon(Icons.message),
       ),
+
       body: Center(
         child: Text(
-          "How are you peoples??",
+          "Hello, Welcome to our class",
           style: GoogleFonts.lobster(
-            fontSize: 18,
-            color: const Color.fromARGB(255, 83, 254, 240),
+            textStyle: TextStyle(fontSize: 30, color: Colors.indigoAccent),
           ),
         ),
       ),
