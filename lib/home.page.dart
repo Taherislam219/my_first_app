@@ -8,13 +8,53 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("HOME PAGE"),
-        backgroundColor: const Color.fromARGB(255, 39, 87, 176),
-        leading: const Icon(Icons.home),
+        title: Text("Menu"),
+        backgroundColor: Color.fromRGBO(255, 215, 0, 100),
+        foregroundColor: Color.fromRGBO(255, 255, 255, 1),
+        //leading: Icon(Icons.home),
         actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
-          IconButton(onPressed: () {}, icon: const Icon(Icons.settings)),
+          IconButton(onPressed: () {}, icon: Icon(Icons.search)),
+          IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
+          IconButton(onPressed: () {}, icon: Icon(Icons.safety_check)),
+          IconButton(onPressed: () {}, icon: Icon(Icons.safety_divider)),
         ],
+      ),
+      drawer: Drawer(
+        child: Column(
+          children: [
+            UserAccountsDrawerHeader(
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 39, 176, 73),
+              ),
+              accountName: Text("John Doe"),
+              accountEmail: Text("johndoe@example.com"),
+              currentAccountPicture: Icon(Icons.person_2),
+            ),
+            ListTile(
+              trailing: const Icon(Icons.home),
+              title: const Text("Home"),
+              onTap: () {},
+            ),
+
+            ListTile(
+              trailing: const Icon(Icons.phone),
+              title: const Text("Contact"),
+              onTap: () {},
+            ),
+
+            ListTile(
+              trailing: const Icon(Icons.feedback),
+              title: const Text("Feedback"),
+              onTap: () {},
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Color.fromARGB(255, 93, 239, 130),
+        foregroundColor: Color.fromARGB(255, 245, 243, 243),
+        child: Icon(Icons.message),
       ),
       body: Center(
         child: Text(
