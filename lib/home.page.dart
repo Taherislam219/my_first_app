@@ -26,8 +26,8 @@ class HomePage extends StatelessWidget {
                 color: const Color.fromARGB(255, 157, 170, 82),
               ),
               currentAccountPicture: Icon(Icons.person),
-              accountName: Text("Name"),
-              accountEmail: Text("Email"),
+              accountName: Text("Taher Islam"),
+              accountEmail: Text("taher.islam@example.com"),
             ),
 
             ListTile(
@@ -65,11 +65,68 @@ class HomePage extends StatelessWidget {
         child: Icon(Icons.message),
       ),
 
-      body: Center(
-        child: Text(
-          "Hello, Welcome to our class",
-          style: GoogleFonts.lobster(
-            textStyle: TextStyle(fontSize: 30, color: Colors.indigoAccent),
+      body: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextButton(
+                  onPressed: () {},
+                  style: TextButton.styleFrom(
+                    backgroundColor: const Color.fromARGB(255, 194, 180, 177),
+                    foregroundColor: const Color.fromARGB(255, 244, 57, 15),
+                    side: BorderSide(
+                      color: const Color.fromARGB(255, 212, 64, 0),
+                      width: 2,
+                    ),
+                    fixedSize: Size(100, 0),
+                    shadowColor: const Color.fromARGB(255, 25, 26, 26),
+                  ),
+                  child: Text("Red"),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color.fromARGB(255, 242, 222, 218),
+                    foregroundColor: const Color.fromARGB(255, 64, 212, 0),
+                    side: BorderSide(
+                      color: const Color.fromARGB(255, 42, 212, 0),
+                      width: 2,
+                    ),
+                    fixedSize: Size(100, 0),
+                    shadowColor: const Color.fromARGB(255, 25, 26, 26),
+                  ),
+                  child: Text("Green"),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: OutlinedButton(
+                  onPressed: () {},
+                  style: OutlinedButton.styleFrom(
+                    backgroundColor: const Color.fromARGB(255, 194, 180, 177),
+                    foregroundColor: Colors.cyan,
+                    side: BorderSide(color: Colors.cyan, width: 2),
+                    fixedSize: Size(100, 0),
+                    shadowColor: const Color.fromARGB(255, 25, 26, 26),
+                  ),
+                  child: Text("Blue"),
+                ),
+              ),
+
+              IconButton(onPressed: () {}, icon: Icon(Icons.alarm)),
+            ],
           ),
         ),
       ),
