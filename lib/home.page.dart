@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -8,13 +7,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Homepage"),
-        backgroundColor: const Color.fromARGB(255, 157, 170, 82),
+        title: const Text(" Homepage"),
+        backgroundColor: const Color.fromARGB(255, 65, 105, 150),
         foregroundColor: Colors.white,
-        // leading: Icon(Icons.home),
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.search)),
-          IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.settings)),
         ],
       ),
 
@@ -22,73 +20,69 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             UserAccountsDrawerHeader(
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 157, 170, 82),
+              decoration: const BoxDecoration(
+                color: Color.fromARGB(255, 65, 105, 150),
               ),
-              currentAccountPicture: Icon(Icons.person),
-              accountName: Text("Taher Islam"),
-              accountEmail: Text("taher.islam@example.com"),
+              currentAccountPicture: const CircleAvatar(
+                child: Icon(Icons.person),
+              ),
+              accountName: const Text("Taher Islam"),
+              accountEmail: const Text("taher.islam@example.com"),
             ),
 
             ListTile(
-              trailing: Icon(Icons.home),
-              hoverColor: const Color.fromARGB(255, 157, 170, 82),
-              title: Text("Homepage"),
+              leading: const Icon(Icons.home),
+              title: const Text("Homepage"),
               onTap: () {},
             ),
-            Divider(),
+            const Divider(),
+
             ListTile(
-              trailing: Icon(Icons.call),
-              hoverColor: const Color.fromARGB(255, 157, 170, 82),
-              title: Text("Contact Me"),
+              leading: const Icon(Icons.call),
+              title: const Text("Contact Me"),
               onTap: () {},
             ),
-            Divider(),
+            const Divider(),
+
             ListTile(
-              trailing: Icon(Icons.feedback),
-              hoverColor: const Color.fromARGB(255, 157, 170, 82),
-              title: Text("FeedBack"),
+              leading: const Icon(Icons.feedback),
+              title: const Text("Feedback"),
               onTap: () {},
             ),
-            Spacer(),
-            Text("Copyright"),
+
+            const Spacer(),
+            const Text("Copyright"),
+            const SizedBox(height: 15),
           ],
         ),
       ),
 
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        backgroundColor: const Color.fromARGB(255, 157, 170, 82),
+        backgroundColor: const Color.fromARGB(255, 65, 105, 150),
         foregroundColor: Colors.white,
-        shape: CircleBorder(),
         tooltip: "Message",
-        child: Icon(Icons.message),
+        child: const Icon(Icons.message),
       ),
 
       body: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(16.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-
             children: [
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextButton(
                   onPressed: () {},
                   style: TextButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 194, 180, 177),
-                    foregroundColor: const Color.fromARGB(255, 244, 57, 15),
-                    side: BorderSide(
-                      color: const Color.fromARGB(255, 212, 64, 0),
-                      width: 2,
-                    ),
-                    fixedSize: Size(100, 0),
-                    shadowColor: const Color.fromARGB(255, 25, 26, 26),
+                    backgroundColor: const Color.fromARGB(255, 249, 98, 87),
+                    foregroundColor: const Color.fromARGB(255, 111, 0, 0),
+                    fixedSize: const Size(100, 45),
                   ),
-                  child: Text("Red"),
+                  child: const Text("Red"),
                 ),
               ),
 
@@ -97,16 +91,12 @@ class HomePage extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 242, 222, 218),
-                    foregroundColor: const Color.fromARGB(255, 64, 212, 0),
-                    side: BorderSide(
-                      color: const Color.fromARGB(255, 42, 212, 0),
-                      width: 2,
-                    ),
-                    fixedSize: Size(100, 0),
-                    shadowColor: const Color.fromARGB(255, 25, 26, 26),
+                    backgroundColor: Colors.green.shade100,
+                    foregroundColor: Colors.green.shade900,
+                    elevation: 3,
+                    fixedSize: const Size(100, 45),
                   ),
-                  child: Text("Green"),
+                  child: const Text("Green"),
                 ),
               ),
 
@@ -115,17 +105,20 @@ class HomePage extends StatelessWidget {
                 child: OutlinedButton(
                   onPressed: () {},
                   style: OutlinedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 194, 180, 177),
-                    foregroundColor: Colors.cyan,
-                    side: BorderSide(color: Colors.cyan, width: 2),
-                    fixedSize: Size(100, 0),
-                    shadowColor: const Color.fromARGB(255, 25, 26, 26),
+                    backgroundColor: const Color.fromARGB(255, 88, 178, 251),
+                    foregroundColor: const Color.fromARGB(255, 1, 4, 105),
+                    side: const BorderSide(color: Colors.blue, width: 1.5),
+                    fixedSize: const Size(100, 45),
                   ),
-                  child: Text("Blue"),
+                  child: const Text("Blue"),
                 ),
               ),
 
-              IconButton(onPressed: () {}, icon: Icon(Icons.alarm)),
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.alarm),
+                color: const Color.fromARGB(255, 65, 105, 150),
+              ),
             ],
           ),
         ),
